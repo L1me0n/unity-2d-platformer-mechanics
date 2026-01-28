@@ -13,7 +13,6 @@ public class Hazard : MonoBehaviour
         }
         else
         {
-            // fallback if you forgot to add PlayerDeath
             RespawnManager.Instance.Respawn();
         }
     }

@@ -797,12 +797,15 @@ MonoBehaviour:
   jumpForce: 14
   coyoteTime: 0.1
   jumpBufferTime: 0.1
+  baseGravityScale: 4
   fallGravityMultiplier: 1.5
   groundCheck: {fileID: 1827045420}
   groundCheckRadius: 0.18
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  enableDoubleJump: 0
+  maxAirJumps: 1
 --- !u!95 &164486836
 Animator:
   serializedVersion: 7

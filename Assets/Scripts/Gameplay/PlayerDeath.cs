@@ -9,7 +9,6 @@ public class PlayerDeath : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        // You can add screen flash / sound later (Phase 9)
         RespawnManager.Instance.Respawn();
 
         isDead = false;

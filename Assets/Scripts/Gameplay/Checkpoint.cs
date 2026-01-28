@@ -22,7 +22,6 @@ public class Checkpoint : MonoBehaviour
 
             RespawnManager.Instance.SetCheckpoint(transform.position);
 
-            // Simple feedback so you KNOW it worked
             if (spriteRenderer != null)
                 spriteRenderer.color = Color.green;
                 transform.localScale = Vector3.one * 1.2f;

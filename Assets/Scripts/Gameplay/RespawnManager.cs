@@ -29,7 +29,6 @@ public class RespawnManager : MonoBehaviour
 
     private void Start()
     {
-        // Auto-fill if not assigned
         if (player == null)
         {
             GameObject p = GameObject.FindGameObjectWithTag("Player");
