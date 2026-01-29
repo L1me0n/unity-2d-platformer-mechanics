@@ -14,6 +14,11 @@ public class SceneLoader : MonoBehaviour
     public void ReloadCurrentScene()
     {
         Time.timeScale = 1f;
+
+        // Rewind coins to level-entry state BEFORE reloading
+        if (CoinManager.Instance != null)
+            CoinManager.Instance.RestoreLevelEntryState();
+
         Scene current = SceneManager.GetActiveScene();
         SceneManager.LoadScene(current.name);
     }

@@ -43,6 +43,10 @@ public class RespawnManager : MonoBehaviour
             currentSpawnPosition = defaultSpawnPoint.position;
         else if (player != null)
             currentSpawnPosition = player.position;
+        
+        if (CoinManager.Instance != null)
+            CoinManager.Instance.SaveSnapshot(); // default spawn coin state
+
     }
 
     private void Update()
@@ -58,10 +62,16 @@ public class RespawnManager : MonoBehaviour
     public void SetCheckpoint(Vector2 newSpawnPos)
     {
         currentSpawnPosition = newSpawnPos;
+        if (CoinManager.Instance != null)
+            CoinManager.Instance.SaveSnapshot(); // checkpoint coin state
+
     }
 
     public void Respawn()
     {
+        if (CoinManager.Instance != null)
+            CoinManager.Instance.RestoreSnapshot();
+
         if (player == null) return;
 
         // Teleport player
